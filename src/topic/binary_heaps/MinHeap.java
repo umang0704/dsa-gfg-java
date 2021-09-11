@@ -1,4 +1,4 @@
-package binary_heaps;
+package topic.binary_heaps;
 
 import topic.utilities.Operations;
 
