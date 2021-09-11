@@ -1,4 +1,4 @@
-package topics.graphs;
+package topic.graphs;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
