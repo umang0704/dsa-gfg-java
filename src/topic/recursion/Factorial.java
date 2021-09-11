@@ -18,4 +18,13 @@ public class Factorial {
         val=factorial_TailRecursion(5,val);
         System.out.println(val);
     }
+    public static double getDist(int x1,int y1,int x2,int y2) {
+    	double X = (x1-x2)*(x1-x2);
+    	double Y = (y1-y2)*(y1-y2);
+    	return Math.sqrt(X+Y);
+    }
+//    public static int honey(int input1, int input2, int[][] input3,int[][] input4,int[] input5,int input6) {
+//		int ct = 0;
+//		for(int i = 0 ; i < input4.length;)
+//	}
 }

@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class Chaining {
     private LinkedList[] buckets;
     private Integer keyCount;
-
+ 
     public LinkedList[] getBuckets() {
         return buckets;
     }
