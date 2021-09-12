@@ -30,19 +30,19 @@ public class Bfs_diconnected {
 		System.out.println();
 	}
 
-	static void bfs_disconnected(ArrayList<ArrayList<Integer>> adj) {
-		visited = new boolean[adj.size()];
-		//this count is used when we have to count no.
-		//of disconnected component in the graph
-		int count = 0;
-		for(int i = 0 ; i < adj.size() ; i++) {
-			if(!visited[i]) {
-				bfs(adj,i);
-				count++;
-			}
+static void bfs_disconnected(ArrayList<ArrayList<Integer>> adj) {
+	visited = new boolean[adj.size()];
+	//this count is used when we have to count no.
+	//of disconnected component in the graph
+	int count = 0;
+	for(int i = 0 ; i < adj.size() ; i++) {
+		if(!visited[i]) {
+			bfs(adj,i);
+			count++;
 		}
-		System.out.println("no. of disconneted component: "+count);
 	}
+	System.out.println("no. of disconneted component: "+count);
+}
 
 	public static void main(String[] args) {
 		int V = 7; 

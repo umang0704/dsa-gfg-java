@@ -218,7 +218,50 @@ public class Rough {
 			System.out.println(min+" "+max);
 		}
 	}
-	public static void main(String[] args) { 
-		pg1()
+	static List<String> pres2(List<String>inp){
+		List<String> res = new ArrayList<String>();
+		int T = Integer.parseInt(inp.get(0));
+        for(int a0 = 1; a0 <=2*T; a0++){
+            int n = Integer.parseInt(inp.get(a0++));
+            int q[] = new int[n];
+            for(int q_i=0; q_i < inp.get(a0).length(); q_i++){
+                q[q_i] = Integer.parseInt(""+inp.get(a0).charAt(q_i));
+            }
+            
+            int bribes = 0;
+            for (int i = 1; i <= n; ++i) {
+                 if (q[i - 1] - i > 2) {
+                     res.add("Too chaotic");
+                     bribes = -1;
+                     break;
+                 }
+            }
+            
+            if (bribes == 0)
+            {
+                for (int i = 0; i < n; ++i) {
+                    for (int j = i + 1; j < i + 100 && j < n; ++j) {
+                        if (q[j] < q[i]) {
+                            bribes++;
+                        }
+                    }
+                }
+                res.add(""+bribes);
+            }
+        }
+		return res;
+	}
+	public static void main(String[] args) {  
+		List<String> inp = new ArrayList<>();
+		inp.add(""+3);
+		inp.add(""+5);
+		inp.add(""+2+1+5+3+4);
+		inp.add(""+5);
+		inp.add(""+2+5+3+1+4);
+		inp.add(""+5);
+		inp.add(""+2+3+5+4+1);
+		inp = pres2(inp);
+		for(String i : inp)
+			System.out.println(i);
 ;	}
 }

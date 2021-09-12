@@ -1,5 +1,8 @@
 package rough;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution {
 	public static String solution(String S) {
 		StringBuilder s1 = new StringBuilder(S); 
@@ -24,8 +27,9 @@ public class Solution {
 		}
 		return s1.toString();
 	}
+	
+	
 	public static void main(String[] args) {
-		String string = "CABABD";
-		System.out.println(solution(string));
+		
 	}
 }
